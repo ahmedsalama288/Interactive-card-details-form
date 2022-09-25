@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+  <!-- Normalize Css File -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Main Css File -->
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+        <div class="card-front">
+          <div class="card-icons">
+            <span>
+              <img src="/images/card-logo.svg" alt="">
+            </span>
+          </div>
+          <div class="card-data">
+            <h2 id="number">0000 0000 0000 0000</h2>
+            <div class="name-date">
+              <p id="cardname">Jane Appleseed</p>
+              <p id="date">00/00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-back">
+          <div class="card-back-data">
+            <p id="cardcvc">000</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="right">
+      <form action="#">
+
+        <p>Cardholder Name</p>
+        <input id="name" type="text" name="name" placeholder="e.g. Jane Appleseed" autocomplete="off">
+
+        <p>Card Number</p>
+        <input id="card-number" type="text" name="card-number" placeholder="e.g. 1234 5678 9123 0000" autocomplete="off" maxlength="19">
+        <span id="card-format" class="error">Worning fromat, number only</span>
+
+
+        <p>Exp. Date (MM/YY) <span>CVC</span></p>
+        <div class="date-cvc">
+          <input id="month" type="number" name="month" max="12" placeholder="MM" autocomplete="off">
+          <input id="year" type="number" name="year" min="1" placeholder="YY" autocomplete="off">
+          <input id="cvc" type="number" name="cvc" placeholder="e.g. 123" autocomplete="off">
+        </div>
+        <div class="error-container">
+          <span id="card-date" class="error">Can't be blank</span>
+          <span id="card-cvc" class="error">Can't be blank</span>
+        </div>
+
+        <input id="submit" type="submit" value="Confirm">
+
+      </form>
+      <div class="thank">
+        <img src="images/icon-complete.svg" alt="">
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <div class="continue">Continue</div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.linkedin.com/in/ahmed-salama-52462424a/" target="_blank">Ahmed Salama</a>.
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
